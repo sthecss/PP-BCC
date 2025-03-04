@@ -50,7 +50,7 @@ int main() {
             case 14: calculaAnoNascimento();        break;
             case 15: calculaDistanciaOrigem();      break;
             case 16: divisaoPremioAmigos();         break;
-            case 0: printf("Saindo...\n");    break;
+            case 0: printf("Saindo...\n");          break;
             default: printf("Escolha invalida! Tente novamente.\n");
         }
     } while (escolha != 0);
