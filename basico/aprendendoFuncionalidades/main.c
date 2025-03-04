@@ -47,8 +47,7 @@ int main() {
             case 3: contasAlgebricas();     break;
             case 4: conversaoTemperatura(); break;
             case 5: converterAreas();       break;
-
-            case 0: printf("Saindo...\n"); break;
+            case 0: printf("Saindo...\n");  break;
             default: printf("Opcao invalida!\n");
         }
     } while(opcao != 0);
