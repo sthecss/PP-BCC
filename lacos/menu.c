@@ -1,8 +1,8 @@
-#include "menu.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "funcoes.h"
+#include "menu.h"
 
 void paginacao(int *paginaAtual, int totalPaginas, char escolha[]) {
     if (strcmp(escolha, "P") == 0 || strcmp(escolha, "p") == 0) {
