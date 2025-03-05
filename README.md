@@ -40,11 +40,17 @@ Exemplo:
 
 int main() {
     int num = 10;
-    float pi = 3.14;
+    float pi = 3.14159;
     char letra = 'A';
-    printf("Inteiro: %d\n", num);
-    printf("Float: %.2f\n", pi);
-    printf("Caractere: %c\n", letra);
+    char nome[] = "Alice";
+
+    // Exibindo valores com formatação
+    printf("Inteiro: %d\n", num);          // Inteiro decimal
+    printf("Float: %.2f\n", pi);           // Float com 2 casas decimais
+    printf("Caractere: %c\n", letra);      // Caractere
+    printf("String: %s\n", nome);          // String
+    printf("Endereço de num: %p\n", &num); // Endereço de memória
+
     return 0;
 }
 ```
@@ -61,12 +67,17 @@ Exemplo:
 #include <stdio.h>
 
 int main() {
-    int num = 10;
+    int num;
+
+    printf("Digite um número: ");
+    scanf("%d", &num);
 
     if (num > 0) {
-        printf("Número positivo\n");
+        printf("Número positivo.\n");
+    } else if (num < 0) {
+        printf("Número negativo.\n");
     } else {
-        printf("Número negativo ou zero\n");
+        printf("Número zero.\n");
     }
 
     return 0;
@@ -84,12 +95,13 @@ Exemplo:
 ```c
 #include <stdio.h>
 
-void saudacao() {
-    printf("Olá, mundo!\n");
+int quadrado(int x) {
+    return x * x;
 }
 
 int main() {
-    saudacao();
+    int num = 5;
+    printf("O quadrado de %d é %d\n", num, quadrado(num));
     return 0;
 }
 ```
@@ -125,20 +137,20 @@ Exemplo:
 #include <stdlib.h>
 
 int main() {
-    int *ptr = (int*) malloc(sizeof(int) * 5);
-    if (ptr == NULL) {
-        printf("Falha na alocação de memória\n");
-        return 1;
-    }
+    int *arr = (int*) malloc(2 * sizeof(int));
+    arr[0] = 10;
+    arr[1] = 20;
 
-    for (int i = 0; i < 5; i++) {
-        ptr[i] = i * 10;
-        printf("%d ", ptr[i]);
-    }
+    arr = (int*) realloc(arr, 4 * sizeof(int));
+    arr[2] = 30;
+    arr[3] = 40;
 
-    free(ptr);
+    for (int i = 0; i < 4; i++) printf("%d ", arr[i]);
+    
+    free(arr);
     return 0;
 }
+
 ```
 
 ## Ponteiros
@@ -152,13 +164,19 @@ Exemplo:
 ```c
 #include <stdio.h>
 
-int main() {
-    int x = 10;
-    int *ptr = &x;
+int dobrar(int x) { return x * 2; }
+int triplicar(int x) { return x * 3; }
 
-    printf("Valor de x: %d\n", *ptr);
+void aplicar(int (*func)(int), int valor) {
+    printf("Resultado: %d\n", func(valor));
+}
+
+int main() {
+    aplicar(dobrar, 5);
+    aplicar(triplicar, 5);
     return 0;
 }
+
 ```
 
 ## Strings
@@ -170,12 +188,22 @@ Exemplo:
 #include <stdio.h>
 #include <string.h>
 
+void inverteString(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+}
+
 int main() {
-    char nome[20];
-    strcpy(nome, "Alice");
-    printf("Nome: %s\n", nome);
+    char palavra[] = "C é top!";
+    inverteString(palavra);
+    printf("Invertida: %s\n", palavra);
     return 0;
 }
+
 ```
 
 ## Vetores e Matrizes
@@ -186,14 +214,29 @@ Exemplo:
 ```c
 #include <stdio.h>
 
-int main() {
-    int vetor[] = {1, 2, 3, 4, 5};
+#define N 3
 
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", vetor[i]);
+void transpor(int matriz[N][N]) {
+    for (int i = 0; i < N; i++)
+        for (int j = i + 1; j < N; j++) {
+            int temp = matriz[i][j];
+            matriz[i][j] = matriz[j][i];
+            matriz[j][i] = temp;
+        }
+}
+
+int main() {
+    int matriz[N][N] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    
+    transpor(matriz);
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++)
+            printf("%d ", matriz[i][j]);
+        printf("\n");
     }
 
     return 0;
 }
-```
+
 ```
