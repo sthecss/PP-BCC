@@ -14,7 +14,7 @@ Este repositório contém diversos códigos e exemplos sobre conceitos fundament
 - [Vetores e Matrizes](#vetores-e-matrizes)  
 
 ## Básico
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/basico)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/blob/main/basico/aprendendoFuncionalidades/funcoes.c)  
 Conceitos fundamentais da linguagem C, incluindo:
 - Entrada e saída de dados (`printf`, `scanf`)
 - Tipos de dados e variáveis
@@ -50,7 +50,7 @@ int main() {
 ```
 
 ## Condicional
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/condicional)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/blob/main/condicional/funcoes.c)  
 Estruturas de controle de fluxo:
 - `if`, `else`, `else if`
 - `switch-case`
@@ -74,7 +74,7 @@ int main() {
 ```
 
 ## Funções
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/funcoes)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/funcoes/funcoes.c)  
 Definição e uso de funções:
 - Declaração e chamada de função
 - Passagem de parâmetros (por valor e por referência)
@@ -95,7 +95,7 @@ int main() {
 ```
 
 ## Laços
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/lacos)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/lacos/funcoes.c)  
 Estruturas de repetição:
 - `for`
 - `while`
@@ -115,7 +115,7 @@ int main() {
 ```
 
 ## Memória Dinâmica
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/memoriaDinamica)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/memoriaDinamica/funcoes.c)  
 Alocação dinâmica de memória usando:
 - `malloc`, `calloc`, `realloc`, `free`
 
@@ -142,7 +142,7 @@ int main() {
 ```
 
 ## Ponteiros
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/ponteiro)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/ponteiro/funcoes.c)  
 Conceitos essenciais sobre ponteiros:
 - Declaração e manipulação
 - Ponteiros e arrays
@@ -162,7 +162,7 @@ int main() {
 ```
 
 ## Strings
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/string)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/string/funcoes.c)  
 Manipulação de cadeias de caracteres:
 
 Exemplo:
@@ -179,7 +179,7 @@ int main() {
 ```
 
 ## Vetores e Matrizes
-[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/vetorEmatriz)  
+[Pasta com exemplos](https://github.com/sthecss/PP-BCC/tree/main/vetorEmatriz/funcoes.c)  
 Trabalho com arrays unidimensionais e bidimensionais:
 
 Exemplo:
