@@ -1,6 +1,6 @@
 # Repositório de Estudos em C
 
-Este repositório contém diversos códigos e exemplos sobre conceitos fundamentais da linguagem C. Abaixo está um índice com os tópicos abordados e uma descrição de cada um deles.
+Este repositório contém diversos códigos e exemplos sobre conceitos fundamentais da linguagem C.
 
 ## Índice
 
